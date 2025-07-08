@@ -1,0 +1,1 @@
+export type ErrorSign = new (message?: string) => Error 

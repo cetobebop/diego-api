@@ -1,0 +1,1 @@
+export const nameFormatRegex = /[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]{1,30}(?:\s[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]{1,30}){0,6}/

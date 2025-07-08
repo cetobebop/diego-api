@@ -1,0 +1,1 @@
+export const ageFormatRegex = /(?<=^|\s|\.)(\d{1,2}|1[01]\d)(?=\s|$)/g

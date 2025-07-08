@@ -1,0 +1,1 @@
+export const sexToMatch = /\bmasculino\b|\bfemenino\b/

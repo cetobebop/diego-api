@@ -1,7 +1,7 @@
 
 import {Schema, model} from 'mongoose'
 import { IPatient } from 'types/IPatient'
-import {PatientStatus} from 'enum/PatientStatus'
+import {PatientStatusEnum} from 'enum/PatientStatus'
 
 
 const PatientSchema = new Schema<IPatient>({
@@ -34,7 +34,7 @@ const PatientSchema = new Schema<IPatient>({
     }],
     status: {
         type: String,
-        default: PatientStatus.DEFAULT
+        default: PatientStatusEnum.DEFAULT
     }
 
 })

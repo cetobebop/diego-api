@@ -11,6 +11,8 @@ type UserTokenData = {
 export function generateToken(data: UserTokenData) {
     const secret = ENV_VARIABLES.SECRET_KEY
     const expiresIn = 60 * 15
+
+
     
 
     if(!secret) throw new TokenError('secret dont exist')
@@ -35,6 +37,8 @@ export function generateToken(data: UserTokenData) {
 export function generateRefreshToken(data: UserTokenData) {
     const refreshTokenSecret = ENV_VARIABLES.SECRET_KEY_REFRESH
     const expiresIn = 60 * 60 * 24 
+
+
 
     if(!refreshTokenSecret) throw new TokenError('secret dont exist')
 

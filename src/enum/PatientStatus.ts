@@ -1,5 +1,5 @@
 
-export enum PatientStatus {
+export enum PatientStatusEnum {
     DEFAULT = "SIN_MODIFICAR",
     MODIFIED = 'MODIFICADO'
 }

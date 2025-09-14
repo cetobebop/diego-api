@@ -8,14 +8,17 @@ const ClinicCasesSchema = new Schema<IClinicCases>({
     
     beginningDate: Date,
     caseNumber: {
-        unique: true,
-        type: Number
+        type: String
     },
     title: String,
     url: String,
     patientId: {
         type: Schema.Types.ObjectId,
         ref: 'Patients'
+    },
+    userId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Users'
     }
 
 })

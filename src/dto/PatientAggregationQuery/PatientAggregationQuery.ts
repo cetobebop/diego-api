@@ -93,6 +93,8 @@ export class PatientAggregationQuery {
         const {name, ci, sex, beginningDate, age} = this.params
 
         if(name) queryParamsAnd.push(this.getParamName(name))
+        if(name) console.log(this.getParamName(name))
+
         
         if(ci) queryParamsOr.push(this.getParamCi(ci))
 

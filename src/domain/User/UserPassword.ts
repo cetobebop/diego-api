@@ -12,5 +12,4 @@ export class UserPassword {
         validateWhiteSpaces(this.value, 'password', UserError)
         validateLength(this.value, 6, 100, 'password', UserError)
     }
-
 }

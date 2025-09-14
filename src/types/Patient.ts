@@ -5,13 +5,13 @@ import { ObjectAnyProperties } from "./ObjectAnyProperties"
 import { PatientCI } from "domain/Patient/PatientCI"
 import { PatientId } from "domain/Patient/PatientId"
 import { OptionsAgreggationQuery } from "./IQueryParams"
-import { AgreggationResult } from "./IPatient"
+import { AgreggationResult, GetByUserIdResult } from "./IPatient"
 
 
 export type PatientRepository = Repository<Patient> & {
     getByCI(ci: number | string): Promise<Patient | null>
-    getByUserId(userId: UserId, options?: ObjectAnyProperties): Promise<Patient[]>
-    getPatientsByInputSearch(textInput: string, userId: string, options: OptionsAgreggationQuery): Promise<AgreggationResult<Patient> | null>
+    getByUserId(userId: UserId, options?: ObjectAnyProperties): Promise<GetByUserIdResult>
+    getPatientsByInputSearch(textInput: string, userId: string, options: OptionsAgreggationQuery): Promise<AgreggationResult<Patient>>
 }
 
 export type IPatientService = {
@@ -22,9 +22,10 @@ export type IPatientService = {
     getAllPatient(): Promise<Patient[]>
     getPatientById(id: PatientId): Promise<Patient | null>
     getPatientByCI(ci: PatientCI): Promise<Patient | null>
-    getPatientsByUserId(userId: UserId, options?: ObjectAnyProperties): Promise<Patient[]>
-    getPatientsByInputSearch(textInput: string, userId: UserId, options: OptionsAgreggationQuery): Promise<AgreggationResult<Patient> | null>
+    getPatientsByUserId(userId: UserId, options?: ObjectAnyProperties): Promise<GetByUserIdResult>
+    getPatientsByInputSearch(textInput: string, userId: UserId, options: OptionsAgreggationQuery): Promise<AgreggationResult<Patient>>
 
     
     
 }
+

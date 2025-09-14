@@ -5,7 +5,7 @@ import { ClinicCasesURL } from "domain/ClinicCases/ClinicCasesURL";
 import { removeUndefinedProperties } from "utils/removeUndefinedProperties";
 
 type ClinicCaseRaw = {
-    caseNumber?: number
+    caseNumber?: string
     title?: string
     beginningDate?: string
     url?: string
@@ -42,10 +42,10 @@ export class PartialClinicCasesDto {
         
 
         const patientProps = removeUndefinedProperties({
-            name: caseNumber,
-            ci: title,
-            birthdate: beginningDate,
-            phoneNumber: url,
+            caseNumber,
+            title,
+            beginningDate,
+            url,
 
         })
 
@@ -54,10 +54,10 @@ export class PartialClinicCasesDto {
 
         toPrimitive(){
                 return removeUndefinedProperties({
-                    beginningDate: this.beginningDate,
-                    caseNumber: this.caseNumber,
-                    title: this.title,
-                    url: this.url,
+                    beginningDate: this.beginningDate?.value,
+                    caseNumber: this.caseNumber?.value,
+                    title: this.title?.value,
+                    url: this.url?.value,
                 })
             }
 

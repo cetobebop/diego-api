@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES6",
+    "module": "es2022",
     "outDir": "./dist", // Carpeta de salida
     "rootDir": "./src", // Carpeta raiz de código fuente
     "strict": true,
+    "moduleDetection": "force",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "baseUrl": "./src", // Base para los alias

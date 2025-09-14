@@ -65,18 +65,20 @@ class PatientControllers {
 
             const userId = new UserId(req.data.id)
 
+            
             const patientsFound = await patientService.getPatientsByUserId(userId, queryParams)
-
-            if(!patientsFound.length) return res.status(404).json({
+         
+            if(!patientsFound.patients?.length) return res.status(404).json({
                 status: ResponseStatus.FAILED,
                 msg: 'patients not found'
             })
 
-            const patients = patientsFound.map(patient => patient.getPatient())
+            const patients = patientsFound.patients.map(patient => patient.getPatient())
 
             return res.status(200).json({
                 status: ResponseStatus.SUCCESS,
-                patients
+                patients,
+                total: patientsFound.total
             })
         } catch (error) {
             const {message, statusCode} = responseErrorStatus(error)
@@ -122,7 +124,8 @@ class PatientControllers {
             const patientFind = await patientService.getPatientById(new PatientId(req.params.id))
 
             if(!patientFind) return res.status(404).json({
-                status: ResponseStatus.FAILED
+                status: ResponseStatus.FAILED,
+                msg: 'patient not found'
             })
 
             return res.status(200).json({
@@ -145,7 +148,8 @@ class PatientControllers {
             const deletedPatient = await patientService.deletePatient(new PatientId(req.params.id))
 
             if(!deletedPatient) return res.status(404).json({
-                status: ResponseStatus.FAILED
+                status: ResponseStatus.FAILED,
+                msg: 'patient not found'
             })
 
             return res.status(200).json({

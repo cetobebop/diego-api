@@ -130,6 +130,11 @@ class AuthControllers {
             const {token, tokenExpiresIn} = generateToken({id: partialUser.id.value, username: partialUser.username.value})
 
             return res.status(200).json({
+                status: ResponseStatus.SUCCESS,
+                user: {
+                    id: partialUser.id.value,
+                    username: partialUser.username.value,
+                },
                 token: {
                     value: token,
                     expiresIn: tokenExpiresIn
@@ -144,6 +149,22 @@ class AuthControllers {
             })
         }
 
+    }
+
+    clearCookies(req: IRequest, res: IResponse) {
+        
+        try {
+            res.clearCookie("refreshToken")
+            return res.status(200).json({
+                status: ResponseStatus.SUCCESS
+            })
+        } catch (error) {
+            const {message, statusCode} = responseErrorStatus(error)
+            return res.status(statusCode).json({
+                status: ResponseStatus.FAILED,
+                msg: message
+            })
+        }
     }
 }
 

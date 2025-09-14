@@ -7,3 +7,5 @@ export class QueryParamsError extends Error{}
 export class PatientSearchParamsError extends Error{}
 
 export class InitializationError extends Error{}
+export class NotFoundError extends Error{}
+

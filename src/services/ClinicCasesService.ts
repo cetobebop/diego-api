@@ -4,7 +4,6 @@ import { ClinicCasesMongoRepository } from "./ClinicCasesMongoRepository";
 import { ClinicCasesId } from "domain/ClinicCases/ClinicCasesId";
 import { PatientId } from "domain/Patient/PatientId";
 import { ObjectAnyProperties } from "types/ObjectAnyProperties";
-import { PartialClinicCasesDto } from "dto/PartialClinicCasesDto";
 
 export class ClinicCasesService implements IClinicCasesService {
 
@@ -18,20 +17,20 @@ export class ClinicCasesService implements IClinicCasesService {
         return this.repository.create(clinicCases)
     }
 
-    deleteClinicCase(clinicCaseId: ClinicCasesId): Promise<boolean | null> {
-        return this.repository.delete(clinicCaseId.value)
+    deleteClinicCase(clinicCaseId: ClinicCasesId, userId: string): Promise<boolean | null> {
+        return this.repository.delete(clinicCaseId.value, userId)
     }
 
-    getClinicCaseById(clinicCaseId: ClinicCasesId): Promise<ClinicCases | null> {
-        return this.repository.getById(clinicCaseId.value)
+    getClinicCaseById(clinicCaseId: ClinicCasesId, userId: string): Promise<ClinicCases | null> {
+        return this.repository.getById(clinicCaseId.value, userId)
     }
 
-    getClinicCasesByPatientId(patientId: PatientId, options?: ObjectAnyProperties): Promise<ClinicCases[]> {
-        return this.repository.getByPatientId(patientId.value, options)
+    getClinicCasesByPatientId(patientId: PatientId, userId: string, options?: ObjectAnyProperties): Promise<ClinicCases[]> {
+        return this.repository.getByPatientId(patientId.value, userId, options)
     }
 
-    updateClinicCase(clinicCaseId: ClinicCasesId, clinicCase: PartialClinicCasesDto): Promise<ClinicCases | null> {
-        return this.repository.update(clinicCaseId.value, clinicCase)
+    updateClinicCase(clinicCaseId: ClinicCasesId, clinicCase: Partial<ClinicCases>, userId: string): Promise<ClinicCases | null> {
+        return this.repository.update(clinicCaseId.value, clinicCase, userId)
     }
     
 }

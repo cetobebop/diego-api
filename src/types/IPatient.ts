@@ -1,3 +1,4 @@
+import { Patient } from "domain/Patient/Patient"
 import { Types } from "mongoose"
 
 
@@ -13,7 +14,7 @@ export type IPatient = {
     sex: string
     beginningDate: Date,
     userId: Types.ObjectId
-    clinicCasesIds?: Types.ObjectId[],
+    clinicCasesIds: Types.ObjectId[],
     status: string
     
     
@@ -27,4 +28,9 @@ type CountResult = {
 export type AgreggationResult <T> = {
   patients: T[];
   count: CountResult[];
+}
+
+export interface GetByUserIdResult {
+    patients: Patient[]
+    total: number
 }

@@ -5,9 +5,9 @@ import { validateType } from "utils/validateType";
 
 
 export class ClinicCasesNumber {
-    constructor(public value: number){
+    constructor(public value: string){
         validateExist(this.value, 'casesNumber', InitializationError)
-        validateType(this.value, 'number', 'caseNumber', InitializationError)
-        validateIsNaN(this.value, 'caseNumber', InitializationError)
+        validateType(this.value, 'string', 'caseNumber', InitializationError)
+        validateIsNaN(parseInt(this.value), 'caseNumber', InitializationError)
     }
 }

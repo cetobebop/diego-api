@@ -55,7 +55,7 @@ export class Patient {
                     name: this.name.value,
                     ci: this.ci.value,
                     phoneNumber: this.phoneNumber.value,
-                    beginninDate :this.beginningDate.value,
+                    beginningDate :this.beginningDate.value,
                     birthdate: this.birthdate.value,
                     sex: this.sex.value,
                     address: this.address.value,

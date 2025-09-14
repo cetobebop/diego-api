@@ -9,6 +9,6 @@ export class PatientName {
         validateExist(this.value, 'name', PatientError)
         validateType(this.value, 'string', 'name', PatientError)
         validateLength(this.value, 1, 50, 'name', PatientError)
+        this.value = this.value.trim().toLowerCase()
     }
-
 }

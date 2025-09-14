@@ -53,7 +53,7 @@ router.patch('/patient/:id',
     }
 )
 
-router.get('/patient_search',
+router.post('/patient_search',
     (req,res,next)=>{
         requireToken(req,res,next)
     }, 

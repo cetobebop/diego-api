@@ -25,6 +25,9 @@ router.post('/refresh_token', (req,res,next)=>{
     AuthControllers.refreshToken(req,res)
 })
 
+router.get('/logout', (req,res)=>{
+    AuthControllers.clearCookies(req,res)
+})
 
 
 export default router

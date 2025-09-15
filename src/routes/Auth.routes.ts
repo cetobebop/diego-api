@@ -1,7 +1,7 @@
 import { Router } from "express";
 
 import AuthControllers from "@controllers/Auth.controllers";
-import { requireRefreshToken } from "middlewares/requireRefreshToken";
+import { requireRefreshToken } from "@middlewares/requireRefreshToken";
 
 const router = Router()
 

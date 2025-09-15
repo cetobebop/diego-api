@@ -1,6 +1,6 @@
 import multer from 'multer'
 
-import { InitializationError } from 'Errors/Errors'
+import { InitializationError } from 'error/Errors'
 import { IRequest } from 'types/RequestAndResponse'
 
 type File = {

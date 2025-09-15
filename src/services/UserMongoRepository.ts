@@ -4,7 +4,7 @@ import { UserId } from "domain/User/UserId";
 import { UserPassword } from "domain/User/UserPassword";
 import { UserUsername } from "domain/User/UserUsername";
 import { UserErrorStatus } from "enum/codeStatus";
-import { UserError } from "Errors/Errors";
+import { UserError } from "error/Errors";
 
 import {UserRepository} from "types/User";
 

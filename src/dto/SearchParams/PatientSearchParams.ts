@@ -1,4 +1,4 @@
-import { PatientSearchParamsError } from "Errors/Errors"
+import { PatientSearchParamsError } from "error/Errors"
 import { ageFormatRegex } from "regex/ageFormatRegex"
 import { ciFormatRegex } from "regex/ciFormatRegex"
 import { dateToMatch } from "regex/dateToMatch"

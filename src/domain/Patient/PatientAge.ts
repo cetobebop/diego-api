@@ -1,4 +1,4 @@
-import { PatientError } from "Errors/Errors";
+import { PatientError } from "error/Errors";
 import { validateExist } from "utils/validateExist";
 import { validateNumberRange } from "utils/validateNumberRange";
 import { validateType } from "utils/validateType";

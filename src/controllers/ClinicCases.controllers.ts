@@ -7,8 +7,8 @@ import { ClinicCasesId } from "domain/ClinicCases/ClinicCasesId";
 import { PatientId } from "domain/Patient/PatientId";
 import { PartialClinicCasesDto } from "dto/PartialClinicCasesDto";
 import { ResponseStatus } from "enum/codeStatus";
-import { InitializationError, NotFoundError } from "Errors/Errors";
-import { responseErrorStatus } from "Errors/ResponseErrors";
+import { InitializationError, NotFoundError } from "error/Errors";
+import { responseErrorStatus } from "error/ResponseErrors";
 import { IRequest, IResponse } from "types/RequestAndResponse";
 import { getServerURL } from "utils/getServerURL";
 

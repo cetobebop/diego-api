@@ -1,6 +1,6 @@
 import { validateType } from "utils/validateType"
 import { validateLength } from "utils/validateLength"
-import { PatientError } from "Errors/Errors"
+import { PatientError } from "error/Errors"
 import { validateExist } from "utils/validateExist"
 
 export class PatientName {

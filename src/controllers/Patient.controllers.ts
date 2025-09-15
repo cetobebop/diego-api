@@ -6,7 +6,7 @@ import { PatientId } from "domain/Patient/PatientId";
 import { UserId } from "domain/User/UserId";
 import { PartialPatientDto } from "dto/PartialPatientDto";
 import { ResponseStatus } from "enum/codeStatus";
-import { responseErrorStatus } from "Errors/ResponseErrors";
+import { responseErrorStatus } from "error/ResponseErrors";
 import { OptionsAgreggationQuery } from "types/IQueryParams";
 import { IRequest, IResponse } from "types/RequestAndResponse";
 

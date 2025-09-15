@@ -13,11 +13,11 @@ import { PipelineStage } from "mongoose";
 import { AgreggationResult, GetByUserIdResult, IPatient } from "types/IPatient";
 import { OptionsAgreggationQuery } from "types/IQueryParams";
 import { ClinicCasesModel } from "@models/ClinicCases";
-import { HistoryPatientMongoRepository } from "./HistoryPatientMongoRepository";
+import { HistoryPatientMongoRepository } from "@services/HistoryPatientMongoRepository";
 import { HistoryPatient, PatientSnapshot } from "domain/HistoryPatient/HistoryPatient";
 import { PatientStatus } from "domain/Patient/PatientStatus";
 import { ClinicCasesId } from "domain/ClinicCases/ClinicCasesId";
-import { NotFoundError } from "Errors/Errors";
+import { NotFoundError } from "error/Errors";
 import { PatientStatusEnum } from "enum/PatientStatus";
 
 

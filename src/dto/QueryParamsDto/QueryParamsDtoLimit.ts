@@ -1,4 +1,4 @@
-import { QueryParamsError } from "Errors/Errors"
+import { QueryParamsError } from "error/Errors"
 import { validateIsNaN } from "utils/validateIsNaN"
 import { validateNumberRange } from "utils/validateNumberRange"
 import { validateType } from "utils/validateType"

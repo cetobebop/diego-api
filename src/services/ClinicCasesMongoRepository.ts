@@ -2,7 +2,7 @@ import { ClinicCasesModel } from "@models/ClinicCases";
 import { PatientModel } from "@models/Patient";
 import { ClinicCases } from "domain/ClinicCases/ClinicCases";
 import { DateDto } from "dto/DateDto/DateDto";
-import { InitializationError, NotFoundError } from "Errors/Errors";
+import { InitializationError, NotFoundError } from "error/Errors";
 import { ClinicCasesRepository } from "types/ClinicCases";
 import { ObjectAnyProperties } from "types/ObjectAnyProperties";
 import { removeUndefinedProperties } from "utils/removeUndefinedProperties";

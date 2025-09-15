@@ -1,7 +1,7 @@
 import { ENV_VARIABLES } from "configEnv";
 import { ResponseStatus } from "enum/codeStatus";
-import { TokenError } from "Errors/Errors";
-import { responseErrorStatus } from "Errors/ResponseErrors";
+import { TokenError } from "error/Errors";
+import { responseErrorStatus } from "error/ResponseErrors";
 import { INextFunction, IRequest, IResponse } from "types/RequestAndResponse";
 import { verifyToken } from "utils/jwt";
 

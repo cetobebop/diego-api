@@ -1,6 +1,6 @@
 import { validateType } from "utils/validateType"
 import { validateLength } from "utils/validateLength"
-import { UserError } from "Errors/Errors"
+import { UserError } from "error/Errors"
 import { validateExist } from "utils/validateExist"
 import { validateWhiteSpaces } from "utils/validateWhiteSpaces"
 

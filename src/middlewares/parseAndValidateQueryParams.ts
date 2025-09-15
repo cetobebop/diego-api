@@ -1,6 +1,6 @@
 import { QueryParamsDto } from "dto/QueryParamsDto/QueryParamsDto";
 import { ResponseStatus } from "enum/codeStatus";
-import { responseErrorStatus } from "Errors/ResponseErrors";
+import { responseErrorStatus } from "error/ResponseErrors";
 import { INextFunction, IRequest, IResponse } from "types/RequestAndResponse";
 import { removeUndefinedProperties } from "utils/removeUndefinedProperties";
 

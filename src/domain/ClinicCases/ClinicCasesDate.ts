@@ -1,4 +1,4 @@
-import { InitializationError } from "Errors/Errors"
+import { InitializationError } from "error/Errors"
 // import { dateFormatRegex } from "regex/DateFormatRegex"
 import { validateDate } from "utils/validateDate"
 import { validateExist } from "utils/validateExist"

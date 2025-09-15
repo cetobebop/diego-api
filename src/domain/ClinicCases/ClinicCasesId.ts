@@ -1,4 +1,4 @@
-import { InitializationError } from "Errors/Errors";
+import { InitializationError } from "error/Errors";
 import { validateExist } from "utils/validateExist";
 import { validateType } from "utils/validateType";
 

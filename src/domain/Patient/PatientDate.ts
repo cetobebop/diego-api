@@ -1,4 +1,4 @@
-import { PatientError } from "Errors/Errors";
+import { PatientError } from "error/Errors";
 import { dateFormatRegex } from "regex/DateFormatRegex";
 import { validateDate } from "utils/validateDate";
 import { validateDateFromNow } from "utils/validateDateFromNow";

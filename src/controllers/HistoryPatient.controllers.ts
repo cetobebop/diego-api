@@ -3,8 +3,8 @@ import { HistoryPatientService } from "@services/HistoryPatientService";
 import { HistoryPatientId } from "domain/HistoryPatient/HistoryPatientId";
 import { PatientId } from "domain/Patient/PatientId";
 import { ResponseStatus } from "enum/codeStatus";
-import { NotFoundError } from "Errors/Errors";
-import { responseErrorStatus } from "Errors/ResponseErrors";
+import { NotFoundError } from "error/Errors";
+import { responseErrorStatus } from "error/ResponseErrors";
 import { IRequest, IResponse } from "types/RequestAndResponse";
 
 const hisPatService = new HistoryPatientService(new HistoryPatientMongoRepository())

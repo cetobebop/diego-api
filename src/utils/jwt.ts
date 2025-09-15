@@ -1,7 +1,7 @@
 
 import { ENV_VARIABLES } from 'configEnv'
 import jwt from 'jsonwebtoken'
-import { TokenError} from 'Errors/Errors'
+import { TokenError} from 'error/Errors'
 
 type UserTokenData = {
     id: string,

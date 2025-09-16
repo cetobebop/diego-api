@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { requireToken } from "middlewares/requireToken";
-import { UploadSinglePDF } from "middlewares/uploadFiles";
+import { requireToken } from "@middlewares/requireToken";
+import { UploadSinglePDF } from "@middlewares/uploadFiles";
 import ClinicCasesControllers from "@controllers/ClinicCases.controllers";
-import { parseAndValidateQueryParams } from "middlewares/parseAndValidateQueryParams";
+import { parseAndValidateQueryParams } from "@middlewares/parseAndValidateQueryParams";
 
 const router = Router()
 

@@ -16,6 +16,7 @@ export function UploadSinglePDF(req: IRequest, res: IResponse, next: INextFuncti
             });
         } else if (err) {
             const {message, statusCode} = responseErrorStatus(err)
+            console.log('ERRORRRR ', message)
             return res.status(statusCode).json({
                 status: ResponseStatus.FAILED,
                 message

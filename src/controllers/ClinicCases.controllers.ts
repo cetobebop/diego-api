@@ -28,7 +28,10 @@ class ClinicCasesControllers {
             let url
 
             if (ENV_VARIABLES.PROD) {
+                console.log('entroo')
                 url = (await (new ObjectStorageFacade().sendFile(urlServer))).url
+                console.log('entroo 2 ', url)
+
             }
             else url = urlServer
 

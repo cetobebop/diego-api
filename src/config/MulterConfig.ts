@@ -19,7 +19,7 @@ type File = {
 function fileFilter (req: IRequest, file: File, cb: multer.FileFilterCallback) {
 
   if(!file.mimetype?.includes('pdf')) cb(new InitializationError('Invalid format file'))
-    
+  
   cb(null, true)
 
 

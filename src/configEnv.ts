@@ -1,3 +1,7 @@
+import {config} from 'dotenv'
+
+config()
+
 export const ENV_VARIABLES = {
     PORT: process.env.PORT || 4000,
     DB_USER: process.env.DB_USER,

@@ -27,7 +27,7 @@ app.use("/public", express.static(path.join(__dirname, "public" )))
 app.use(cors(corsOptions))
 app.use(cookieParser())
 app.use(express.json())
-app.use(limiter)
+app.use(limiter) 
 app.disable('x-powered-by')
 
 app.use('/api/patients', patientRouter)

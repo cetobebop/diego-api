@@ -27,7 +27,7 @@ function fileFilter (req: IRequest, file: File, cb: multer.FileFilterCallback) {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './src/public')
+    cb(null, 'src/public')
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)

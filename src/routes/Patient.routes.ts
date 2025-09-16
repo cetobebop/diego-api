@@ -1,7 +1,7 @@
 import PatientControllers from "@controllers/Patient.controllers";
 import { Router } from "express";
-import { parseAndValidateQueryParams } from "middlewares/parseAndValidateQueryParams";
-import { requireToken } from "middlewares/requireToken";
+import { parseAndValidateQueryParams } from "@middlewares/parseAndValidateQueryParams";
+import { requireToken } from "@middlewares/requireToken";
 
 const router = Router()
 

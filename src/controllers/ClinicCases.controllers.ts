@@ -24,7 +24,7 @@ class ClinicCasesControllers {
             if(!req.data?.id) throw new InitializationError('userId not provided')
 
             const urlServer = getServerURL(req.file.filename)
-            
+            console.log('url del archivo ', urlServer)
             let url
 
             if (ENV_VARIABLES.PROD) {
@@ -51,6 +51,7 @@ class ClinicCasesControllers {
         } catch (error) {
             
             const {message, statusCode} = responseErrorStatus(error)
+            console.log('Error en cacth: ', error)
             return res.status(statusCode).json({
                 status: ResponseStatus.FAILED,
                 msg: message

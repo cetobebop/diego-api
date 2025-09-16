@@ -11,6 +11,7 @@ import patientRouter from "@routes/Patient.routes"
 import clinicCasesRouter from '@routes/ClinicCases.routes'
 import historyPatientRouter from '@routes/HistoryPatient.routes'
 import limiter from "@config/rate-limiter";
+import { ENV_VARIABLES } from "configEnv";
 
 const app = express()
 
@@ -18,7 +19,7 @@ const app = express()
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const corsOptions = {
-  origin: 'http://localhost:9000', 
+  origin: ENV_VARIABLES.CORS_URL, 
   credentials: true
 };
 

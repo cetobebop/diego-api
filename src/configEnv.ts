@@ -14,6 +14,7 @@ export const ENV_VARIABLES = {
     CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
     CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
     MY_SERVER_URL: process.env.MY_SERVER_URL || `http://localhost:${process.env.PORT}`,
-    PROD: process.env.PROD || false
+    PROD: process.env.PROD || false,
+    CORS_URL: process.env.CORS_URL || 'http://localhost:9000'
 
 }

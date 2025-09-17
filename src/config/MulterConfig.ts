@@ -2,6 +2,7 @@ import multer from 'multer'
 
 import { InitializationError } from 'error/Errors'
 import { IRequest } from 'types/RequestAndResponse'
+import { ENV_VARIABLES } from 'configEnv'
 
 type File = {
     fieldname: string	
@@ -27,7 +28,9 @@ function fileFilter (req: IRequest, file: File, cb: multer.FileFilterCallback) {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'src/public')
+    const path = ENV_VARIABLES.PROD ? 'dist/public' : 'src/public'
+    console.log(path)
+    cb(null, path)
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)

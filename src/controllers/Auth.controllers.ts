@@ -39,6 +39,7 @@ class AuthControllers {
             res.cookie("refreshToken", refreshToken, {
                 httpOnly: true,
                 secure: !(ENV_VARIABLES.MODE === "developer"),
+                domain: !(ENV_VARIABLES.MODE === "developer") ? ENV_VARIABLES.COOKIE_DOMAIN_HEADER : undefined,
                 expires: new Date(Date.now() + refreshTokenExpiresIn * 1000)
             })
 
@@ -93,7 +94,8 @@ class AuthControllers {
             res.cookie("refreshToken", refreshToken, {
                 httpOnly: true,
                 secure: !(ENV_VARIABLES.MODE === "developer"),
-                expires: new Date(Date.now() + refreshTokenExpiresIn * 1000)
+                domain: !(ENV_VARIABLES.MODE === "developer") ? ENV_VARIABLES.COOKIE_DOMAIN_HEADER : undefined,
+                expires: new Date(Date.now() + refreshTokenExpiresIn * 1000),
             })
 
             return res.status(200).json({

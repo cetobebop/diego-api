@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { requireToken } from "middlewares/requireToken";
+import { requireToken } from "@middlewares/requireToken";
 import { IRequest, IResponse } from "types/RequestAndResponse";
 
 

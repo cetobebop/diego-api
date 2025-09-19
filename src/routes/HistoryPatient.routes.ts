@@ -1,6 +1,6 @@
 import  HistoryPatientControllers  from "@controllers/HistoryPatient.controllers";
 import { Router } from "express";
-import { requireToken } from "middlewares/requireToken";
+import { requireToken } from "@middlewares/requireToken";
 
 const router = Router()
 

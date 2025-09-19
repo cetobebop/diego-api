@@ -40,6 +40,7 @@ class AuthControllers {
                 httpOnly: true,
                 secure: !(ENV_VARIABLES.MODE === "developer"),
                 domain: !(ENV_VARIABLES.MODE === "developer") ? ENV_VARIABLES.COOKIE_DOMAIN_HEADER : undefined,
+                sameSite: !(ENV_VARIABLES.MODE === "developer") ? 'none' : "lax",
                 expires: new Date(Date.now() + refreshTokenExpiresIn * 1000)
             })
 
@@ -95,6 +96,7 @@ class AuthControllers {
                 httpOnly: true,
                 secure: !(ENV_VARIABLES.MODE === "developer"),
                 domain: !(ENV_VARIABLES.MODE === "developer") ? ENV_VARIABLES.COOKIE_DOMAIN_HEADER : undefined,
+                sameSite: !(ENV_VARIABLES.MODE === "developer") ? 'none' : "lax",
                 expires: new Date(Date.now() + refreshTokenExpiresIn * 1000),
             })
 
